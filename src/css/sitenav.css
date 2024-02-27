@@ -1,0 +1,10 @@
+.NavLink {
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.Navbar {
+    margin: auto;
+    padding: 0 16px;
+    max-width: fit-content;
+}

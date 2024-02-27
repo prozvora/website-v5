@@ -1,0 +1,44 @@
+.algSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.algDescription {
+  background-color: lightgrey;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.algMoves {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.algImgCont {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.rot90 {
+  transform: rotate(90deg);
+}
+.rot180 {
+  transform: rotate(180deg);
+}
+.rot270 {
+  transform: rotate(270deg);
+}
+
+html,
+body {
+  font-family: sans-serif;
+}

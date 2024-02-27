@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "my-personal-site",
-  "author": "proz",
+  "author": "Pavel Rozvora <prozvora@gmail.com>",
   "keywords": [
     "gatsby"
   ],
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.0.1",
+    "classnames": "^2.5.1",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-mdx": "^5.13.1",

@@ -1,0 +1,54 @@
+/* .color0,
+.color1,
+.color2 {
+  margin: 0 1px;
+} */
+.color0 {
+  display: block;
+  /* background-color: white; */
+  padding: 2px;
+}
+
+.color1 {
+  background-color: white;
+  border: 1px black solid;
+}
+
+.color2 {
+  background-color: gold;
+  border: 1px black solid;
+}
+
+.face {
+  display: flex;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  /* padding: 1px 0; */
+}
+.cube {
+  display: block;
+  margin: 20px;
+}
+.thinHeight {
+  height: 8px;
+  margin: 4px 0;
+}
+
+.fullHeight {
+  height: 40px;
+}
+
+.thinWidth {
+  width: 8px;
+  margin: 0 4px;
+}
+
+.fullWidth {
+  width: 40px;
+}
+
+.fullHeight.fullWidth {
+  box-shadow: inset 2px -2px 6px #888;
+}
