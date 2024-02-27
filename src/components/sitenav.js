@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import '../css/sitenav.css'
 
-const NavLink = ({ children }) => <span className='navLink'>{children}</span>
+const NavLink = ({ children }) => <div className='navLink'>{children}</div>
 
 NavLink.propTypes = {
   children: PropTypes.node,
