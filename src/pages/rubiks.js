@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-// import SEO from '../components/seo'
 import RubiksSection from '../components/rubiks_section'
 import {
   dot,
@@ -25,7 +24,6 @@ import '../css/rubiks.css'
 
 const Rubiks = () => (
   <Layout>
-    {/* <SEO title="Rubiks" /> */}
     <h2>Rubiks Cube OLL Algorithms</h2>
     <p>
       Click a tile, or tab to a tile and press any key, to toggle showing its

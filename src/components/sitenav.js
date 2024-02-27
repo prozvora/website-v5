@@ -3,14 +3,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import '../css/sitenav.css'
 
-const NavLink = ({ children }) => <span className='NavLink'>{children}</span>
+const NavLink = ({ children }) => <span className='navLink'>{children}</span>
 
 NavLink.propTypes = {
   children: PropTypes.node,
 }
 
 const Navbar = ({ children }) => (
-  <div className='Navbar'>
+  <div className='navbar'>
     {React.Children.map(children, (child) => (
       <NavLink>{React.cloneElement(child)}</NavLink>
     ))}

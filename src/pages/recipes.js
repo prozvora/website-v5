@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import Layout from '../components/layout'
-// import SEO from '../components/seo'
 import RecipeDetail from '../components/recipe_detail'
 import { recipeList } from '../../static/recipe_list'
 import '../css/recipes.css'
@@ -12,7 +11,6 @@ const Recipes = () => {
   const handleChange = (e) => setMultiplier(e.target.value)
   return (
     <Layout>
-      {/* <SEO title="Recipes" /> */}
       <h2>Recipes</h2>
       <label className='multiplier'>
         Multiply ingredient amounts:
