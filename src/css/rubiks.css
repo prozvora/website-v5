@@ -5,16 +5,19 @@
 }
 
 .algDescription {
+  max-width: 300px;
+  width: calc(49% - 16px);
   background-color: lightgrey;
-  width: 300px;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin: 0 8px 8px;
+  padding: 0 4px;
   font-weight: bold;
 }
 
 .algMoves {
   display: flex;
   justify-content: center;
+  text-align: center;
+  padding: 0 4px;
   margin-bottom: 8px;
 }
 
@@ -27,15 +30,17 @@
 .hidden {
   visibility: hidden;
 }
-
-.rot90 {
-  transform: rotate(90deg);
+.jumpTo {
+  display: flex;
+  flex-wrap: wrap;
 }
-.rot180 {
-  transform: rotate(180deg);
-}
-.rot270 {
-  transform: rotate(270deg);
+.jumpToHeading {
+  padding: 12px 4px;
+  display: flex;
+  min-width: 33%;
+  @media screen and (min-width: 480px) {
+    min-width: 20%;
+  }
 }
 
 html,

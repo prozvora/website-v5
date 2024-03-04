@@ -29,24 +29,24 @@
 }
 .cube {
   display: block;
-  margin: 20px;
+  margin: 16px;
 }
 .thinHeight {
-  height: 8px;
+  height: 7px;
   margin: 4px 0;
 }
 
 .fullHeight {
-  height: 40px;
+  height: 35px;
 }
 
 .thinWidth {
-  width: 8px;
+  width: 7px;
   margin: 0 4px;
 }
 
 .fullWidth {
-  width: 40px;
+  width: 35px;
 }
 
 .fullHeight.fullWidth {
