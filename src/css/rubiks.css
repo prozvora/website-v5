@@ -35,7 +35,7 @@
   flex-wrap: wrap;
 }
 .jumpToHeading {
-  padding: 12px 4px;
+  padding: 0 4px 20px;
   display: flex;
   min-width: 33%;
   @media screen and (min-width: 480px) {

@@ -135,7 +135,12 @@ export const recipeList = {
               item: 'salt and pepper',
               parens: 'to taste',
             },
-            { item: 'jasmine or bismati rice', amount: 1, measure: 'cup' },
+            {
+              item: 'white rice',
+              amount: 1,
+              measure: 'cup',
+              parens: 'I prefer jasmine or bismati',
+            },
             { item: 'naan', parens: 'toasted' },
           ],
           optional: [{ item: 'turmeric' }],

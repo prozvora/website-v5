@@ -13,19 +13,18 @@ const Rubiks = () => (
       Click a tile, or tab to a tile and press any key, to toggle showing its
       algorithm.
     </p>
-    <h3>Jump To:</h3>
+    <h3>Jump To Section:</h3>
     <div className='jumpTo'>
       {ollPatterns.map((pattern) => (
-        // TODO: add jump to section heading
         <div key={pattern.heading} className='jumpToHeading'>
-          {pattern.heading}
+          <a href={`#${pattern.heading}`}>{pattern.heading}</a>
         </div>
       ))}
     </div>
     {ollPatterns.map((pattern) => (
       <Fragment key={pattern.heading}>
         {/* add ref for jumping to heading */}
-        <h3>{pattern.heading}</h3>
+        <h3 id={pattern.heading}>{pattern.heading}</h3>
         <RubiksSection data={pattern.patterns} />
       </Fragment>
     ))}
