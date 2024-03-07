@@ -1,12 +1,11 @@
-import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
-import '../css/timer.css';
+import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
+import '../css/timer.css'
 
-const CountdownTimer = props => {
-  const {endDate, title} = props;
+const CountdownTimer = ({ endDate, title }) => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(endDate) - +new Date();
-    let timeLeft = {};
+    const difference = +new Date(endDate) - +new Date()
+    let timeLeft = {}
 
     if (difference > 0) {
       timeLeft = {
@@ -14,37 +13,37 @@ const CountdownTimer = props => {
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
-      };
+      }
     }
 
-    return timeLeft;
-  };
+    return timeLeft
+  }
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
   useEffect(() => {
     setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-  });
+      setTimeLeft(calculateTimeLeft())
+    }, 1000)
+  })
 
-  const timerComponents = [];
+  const timerComponents = []
 
-  Object.keys(timeLeft).forEach(interval => {
+  Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval]) {
-      return;
+      return
     }
 
     timerComponents.push(
-      <span className="timer-interval">
+      <span key={`${title} ${interval}`} className='timer-interval'>
         {`${timeLeft[interval]} ${interval}`}
-      </span>,
-    );
-  });
+      </span>
+    )
+  })
 
   return (
     <div>
-      <div className="timer-title">{title}</div>
+      <div className='timer-title'>{title}</div>
       <div>
         {timerComponents.length ? (
           timerComponents
@@ -53,12 +52,12 @@ const CountdownTimer = props => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 CountdownTimer.propTypes = {
-  endDate: PropTypes.instanceOf(Date),
+  endDate: PropTypes.string,
   title: PropTypes.string,
-};
+}
 
-export default CountdownTimer;
+export default CountdownTimer
