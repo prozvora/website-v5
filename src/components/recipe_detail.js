@@ -65,21 +65,21 @@ const RecipeDetail = ({ recipe, imageMap }) => {
         </>
       )}
       <h4>Ingredients</h4>
-      {recipe.ingredients.components.map((el) => (
-        <Fragment key={el.heading}>
-          {el.heading && <h4>{el.heading}</h4>}
+      {recipe.ingredients.components.map((component) => (
+        <Fragment key={component.heading || recipe.name}>
+          {component.heading && <h4>{component.heading}</h4>}
           <p>Required:</p>
           <ul>
-            {el.required.map((el, i) => (
-              <IngredientDetail key={i} multiplier={multiplier} {...el} />
+            {component.required.map((req, i) => (
+              <IngredientDetail key={i} multiplier={multiplier} {...req} />
             ))}
           </ul>
-          {el.optional?.length > 0 && (
+          {component.optional?.length > 0 && (
             <>
               <p>Optional:</p>
               <ul>
-                {el.optional.map((el, i) => (
-                  <IngredientDetail key={i} multiplier={multiplier} {...el} />
+                {component.optional.map((opt, i) => (
+                  <IngredientDetail key={i} multiplier={multiplier} {...opt} />
                 ))}
               </ul>
             </>
