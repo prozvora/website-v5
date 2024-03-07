@@ -2,6 +2,9 @@
   display: block;
   padding: 8px 0;
 }
+.multiplierInput {
+  margin: 0 8px;
+}
 
 .recipeButton {
   margin-right: 8px;
@@ -9,4 +12,9 @@
 
 .RecipeDetail {
   padding-top: 16px;
+}
+
+.recipeImage {
+  width: min(400px, 90vw);
+  margin: 16px 0;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Layout from '../components/layout'
 import RubiksSection from '../components/rubiks_section'
@@ -16,14 +16,18 @@ const Rubiks = () => (
     <h3>Jump To:</h3>
     <div className='jumpTo'>
       {ollPatterns.map((pattern) => (
-        <div className='jumpToHeading'>{pattern.heading}</div>
+        // TODO: add jump to section heading
+        <div key={pattern.heading} className='jumpToHeading'>
+          {pattern.heading}
+        </div>
       ))}
     </div>
     {ollPatterns.map((pattern) => (
-      <>
+      <Fragment key={pattern.heading}>
+        {/* add ref for jumping to heading */}
         <h3>{pattern.heading}</h3>
         <RubiksSection data={pattern.patterns} />
-      </>
+      </Fragment>
     ))}
   </Layout>
 )
