@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const formatNumber = (number) => {
@@ -30,10 +30,11 @@ IngredientDetail.propTypes = {
   parens: PropTypes.string,
 }
 
-const RecipeDetail = ({ recipe, multiplier, imageMap }) => {
+const RecipeDetail = ({ recipe, imageMap }) => {
+  const [multiplier, setMultiplier] = useState(1)
+  const handleChange = (e) => setMultiplier(e.target.value)
   return recipe ? (
     <div className='RecipeDetail'>
-      <h3>{recipe.name}</h3>
       {recipe.image && (
         <div className='recipeImage'>
           <GatsbyImage
@@ -46,7 +47,16 @@ const RecipeDetail = ({ recipe, multiplier, imageMap }) => {
           />
         </div>
       )}
-
+      <h3>{recipe.name}</h3>
+      <label className='multiplier'>
+        Multiply ingredient amounts:
+        <input
+          className='multiplierInput'
+          type='number'
+          value={multiplier}
+          onChange={handleChange}
+        />
+      </label>
       <h4>Serves {recipe.serves * multiplier}</h4>
       {recipe.notes && (
         <>

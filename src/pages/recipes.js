@@ -7,8 +7,6 @@ import '../css/recipes.css'
 
 const Recipes = () => {
   const [selectedRecipe, setSelectedRecipe] = useState()
-  const [multiplier, setMultiplier] = useState(1)
-  const handleChange = (e) => setMultiplier(e.target.value)
   const [imageMap, setImageMap] = useState({})
 
   const imageData = useStaticQuery(graphql`
@@ -40,28 +38,20 @@ const Recipes = () => {
   return (
     <Layout>
       <h2>Recipes</h2>
-      <label className='multiplier'>
-        Multiply ingredient amounts:
-        <input
-          className='multiplierInput'
-          type='number'
-          value={multiplier}
-          onChange={handleChange}
-        />
-      </label>
-      {Object.keys(recipeList).map((recipe) => (
-        <button
-          className='recipeButton'
-          key={recipe}
-          onClick={() => setSelectedRecipe(recipe)}
-        >
-          {recipeList[recipe].name}
-        </button>
-      ))}
+      <div className='buttonSection'>
+        {Object.keys(recipeList).map((recipe) => (
+          <button
+            className='recipeButton'
+            key={recipe}
+            onClick={() => setSelectedRecipe(recipe)}
+          >
+            {recipeList[recipe].name}
+          </button>
+        ))}
+      </div>
       <RecipeDetail
         className='RecipeDetail'
         recipe={recipeList[selectedRecipe]}
-        multiplier={multiplier}
         imageMap={imageMap}
       />
     </Layout>
