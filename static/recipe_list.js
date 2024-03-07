@@ -151,7 +151,7 @@ export const recipeList = {
       'In a large bowl, mix together yogurt, minced garlic, minced ginger, garam masala, cumin, chili powder, and salt.',
       'Trim and cube raw chicken breasts.',
       'Add cubed chicken to the marinade. Mix until the cubes are evenly coated. Cover and refrigerate 2-4 hours.',
-      'Peel and dice potatoes. Parboil the potatoes until they are about halfway done. Drain and set aside to allow them to dry out.',
+      'Peel and cube potatoes. Parboil the potatoes until they are about halfway done. Drain and set aside to allow them to dry out.',
       'Cook rice separately.',
       'In a large pot on medium-high heat, saute onion and dried potato cubes for about 5 minutes, until onion is translucent and potato cubes have some crisp.',
       'Add minced garlic and drained chickpeas, saute 2 more minutes.',

@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import '../css/timer.css'
 
 const CountdownTimer = ({ endDate, title }) => {
+  const endDateTime = new Date(endDate)
   const calculateTimeLeft = () => {
-    const difference = +new Date(endDate) - +new Date()
+    const difference = endDateTime - new Date()
     let timeLeft = {}
 
     if (difference > 0) {
