@@ -4,11 +4,11 @@ import Layout from '../components/layout'
 const Resume = () => (
   <Layout>
     <h2>Resume</h2>
-    <p>My current experience, as of February 2024</p>
+    <p>My current experience, and assorted links.</p>
 
     <p>
       <a
-        href='/assets/Pavel_Rozvora_Resume_2024.pdf'
+        href='/assets/Pavel_Rozvora_Resume_April_2024.pdf'
         target='_blank'
         rel='noopener noreferrer'
       >
